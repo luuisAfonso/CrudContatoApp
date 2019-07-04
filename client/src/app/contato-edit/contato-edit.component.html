@@ -1,0 +1,25 @@
+<mat-card>
+    <form #contatoForm="ngForm" (ngSubmit)="save(contatoForm.value)">
+      <mat-card-header>
+        <mat-card-title><h2>{{contato.name ? 'Editar' : 'Adicionar'}} contato</h2></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <input type="hidden" name="href" [(ngModel)]="contato.href">
+        <mat-form-field>
+          <input matInput placeholder="Nome do contato" [(ngModel)]="contato.name"
+                 required name="name" #name>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Email do contato" [(ngModel)]="contato.email"
+                 required email="email" #email>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit"
+                [disabled]="!contatoForm.form.valid">Salvar</button>
+        <button mat-raised-button color="secondary" (click)="remove(contato.href)"
+                *ngIf="contato.href" type="button">Deletar</button>
+        <a mat-button routerLink="/contato-list">Cancelar</a>
+      </mat-card-actions>
+    </form>
+  </mat-card>

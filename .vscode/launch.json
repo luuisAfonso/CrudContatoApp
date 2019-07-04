@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CrudAppApplication",
+            "request": "launch",
+            "mainClass": "com.afonsosProjects.Crud_App.CrudAppApplication",
+            "projectName": "Crud_App"
+        }
+    ]
+}
