@@ -1,0 +1,7 @@
+<ng-container>
+    <h3 mat-line> {{contato? 'detalhes de '+contato.name+':' : 'Contato não selecionado.'}}</h3>
+    <ng-container *ngIf="contato">
+        <h4 mat-line style="padding: 0px 40px"> Email: {{ contato.email? contato.email : 'Não cadastrado.' }} </h4>
+        <h4 mat-line style="padding: 0px 40px"> Número: {{ contato.phoneNumber? contato.phoneNumber : 'Não cadastrado' }} </h4>
+    </ng-container>
+</ng-container>

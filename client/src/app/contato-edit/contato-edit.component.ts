@@ -1,8 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ContatoService } from '../shared/contato/contato.service';
 import { NgForm } from '@angular/forms';
+
+import { Subscription } from 'rxjs';
+
+import { ContatoService } from '../shared/contato/contato.service';
+
 
 @Component({
   selector: 'app-contato-edit',

@@ -1,14 +1,15 @@
 <mat-card>
-  <mat-card-title>Car List</mat-card-title>
+  <mat-card-title>Lista de Contatos</mat-card-title>
   <mat-card-content>
     <mat-list>
       <mat-list-item *ngFor="let contato of contatos">
         <h3 mat-line>
-          <a mat-button [routerLink]="['/contato-edit', contato.id]">{{contato.name}}</a>
+          <a mat-button (mouseenter)="onMouseOnContato(contato);" [routerLink]="['/contato-edit', contato.id]">{{contato.name}}</a><br>
         </h3>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
-
   <button mat-fab color="primary" [routerLink]="['/contato-add']">Add</button>
+  <br><br>
+  <app-details [contato]='selectedContato'></app-details>
 </mat-card>
