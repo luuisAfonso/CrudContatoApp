@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ContatoListComponent } from './contato-list/contato-list.component';
 import { ContatoEditComponent } from './contato-edit/contato-edit.component';
+import { LoginComponent } from "./login/login.component";
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -15,6 +17,13 @@ const routes: Routes = [
   },
   {
     path: 'contato-edit/:id', component: ContatoEditComponent
+  },
+  {
+    path: 'login', component: LoginComponent
+  },
+  {
+    path:'**',
+    component: NotFoundComponent
   }
 ];
 

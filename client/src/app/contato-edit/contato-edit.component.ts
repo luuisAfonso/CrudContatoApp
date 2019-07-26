@@ -59,6 +59,4 @@ export class ContatoEditComponent implements OnInit, OnDestroy {
       this.gotoList();
     }, error => console.error(error));
   }
-
-
 }

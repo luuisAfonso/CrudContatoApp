@@ -27,6 +27,7 @@ export class ContatoService {
     if (contato['href']) {
       result = this.http.put(contato.href, contato);
     } else {
+      console.log(contato);
       result = this.http.post(this.CONTATO_API, contato);
     }
     return result;

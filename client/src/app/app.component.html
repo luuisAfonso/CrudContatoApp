@@ -1,4 +1,5 @@
 <mat-toolbar color="primary">
-  <span>Welcome to {{title}}!</span>
+  <span>{{title}}!</span>
+  <span><a mat-button [routerLink]="['login']">Login</a></span>
 </mat-toolbar>
 <router-outlet></router-outlet>

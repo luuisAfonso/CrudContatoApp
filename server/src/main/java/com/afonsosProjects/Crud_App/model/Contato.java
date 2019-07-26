@@ -1,4 +1,4 @@
-package com.afonsosProjects.Crud_App;
+package com.afonsosProjects.Crud_App.model;
 
 import lombok.*;
 
